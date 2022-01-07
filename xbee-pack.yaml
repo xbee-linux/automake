@@ -1,0 +1,24 @@
+schema-version: 1.0
+
+description: |
+  The Automake package contains programs for generating Makefiles for use with Autoconf.
+
+  Installed programs: aclocal, aclocal-1.16 (hard linked with aclocal), automake, and automake-1.16 (hard linked with automake)
+  Installed directories: /usr/share/aclocal-1.16, /usr/share/automake-1.16, and /usr/share/doc/automake-1.16.4
+  Short Descriptions:
+    aclocal: Generates aclocal.m4 files based on the contents of configure.in files
+    aclocal-1.16: A hard link to aclocal
+    automake: A tool for automatically generating Makefile.in files from Makefile.am files [To create all the Makefile.in files for a package, run this program in the top-level directory. By scanning the configure.in file, it automatically finds each appropriate Makefile.am file and generates the corresponding Makefile.in file.]
+    automake-1.16: A hard link to automake
+
+builder: ./automake-builder
+
+var:
+  version: 1.16.4
+
+dependency: perl
+
+provision:
+  - copy:
+      builder: automake
+      todir: /

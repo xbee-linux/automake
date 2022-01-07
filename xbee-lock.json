@@ -1,0 +1,35 @@
+{
+    "Ids": [
+        {
+            "From": {
+                "version": "20.04",
+                "origin": "https://github.com/xbeerepository/ubuntu.git"
+            },
+            "Commit": "49e7213a159078776ad0bd3caaf8bb1236d50b34"
+        },
+        {
+            "From": {
+                "origin": "https://github.com/xbee-linux/autoconf.git"
+            },
+            "Commit": "986033b623b21724e4f2c5ec96c2834ad05b420c"
+        },
+        {
+            "From": {
+                "origin": "https://github.com/xbee-linux/m4.git"
+            },
+            "Commit": "fa8edbf89eaffad9add1b52491d9a06a9e54330b"
+        },
+        {
+            "From": {
+                "origin": "https://github.com/xbee-linux/bison.git"
+            },
+            "Commit": "f2b051e4f4b48eeed49b23a75036150c1fdcf0a4"
+        },
+        {
+            "From": {
+                "origin": "https://github.com/xbee-linux/gawk.git"
+            },
+            "Commit": "036c626903f9ab1b78eb439b081befe74874d9a3"
+        }
+    ]
+}

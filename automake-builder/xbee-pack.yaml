@@ -1,0 +1,29 @@
+schema-version: 1.0
+
+type: builder
+
+
+const:
+  srcDir: /usr/src
+  exportDir: /opt/automake
+
+dependencies:
+  - autoconf
+  - m4
+
+
+provision:
+  - url:
+      from: https://ftp.gnu.org/gnu/automake/automake-{% version %}.tar.gz
+      todir: "{% srcDir %}"
+
+build:
+  - shell:
+      cmds:
+        - ./configure --prefix=/usr --docdir=/usr/share/doc/automake-{% version %}
+        - make
+#        - make -j4 check
+        - make install DESTDIR={% exportDir %}
+      directory: "{% srcDir %}/automake-{% version %}"
+  - export: "{% exportDir %}"
+
