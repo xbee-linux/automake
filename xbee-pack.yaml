@@ -13,7 +13,7 @@ description: |
     automake: A tool for automatically generating Makefile.in files from Makefile.am files [To create all the Makefile.in files for a package, run this program in the top-level directory. By scanning the configure.in file, it automatically finds each appropriate Makefile.am file and generates the corresponding Makefile.in file.]
     automake-1.16: A hard link to automake
 
-in:
+var:
   version: 1.16.4
 
 dependencies:
@@ -22,16 +22,16 @@ dependencies:
 
 provision:
   - url:
-      from: https://ftp.gnu.org/gnu/automake/automake-{% version %}.tar.gz
-      todir: "{% xbeeSrc %}"
+      from: https://ftp.gnu.org/gnu/automake/automake-{{ .version }}.tar.gz
+      todir: "{{ .xbee.src }}"
 
 build:
   - shell:
       cmds:
-        - ./configure --prefix=/usr --docdir=/usr/share/doc/automake-{% version %}
+        - ./configure --prefix=/usr --docdir=/usr/share/doc/automake-{{ .version }}
         - make
 #        - make -j4 check
-        - make install DESTDIR={% xbeeOut %}
-      directory: "{% xbeeSrc %}/automake-{% version %}"
+        - make install DESTDIR={{ .xbee.out }}
+      directory: "{{ .xbee.src }}/automake-{{ .version }}"
 
 
