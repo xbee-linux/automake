@@ -1,7 +1,5 @@
 schema-version: 1.0
 
-type: builder
-
 description: |
   The Automake package contains programs for generating Makefiles for use with Autoconf.
 
@@ -17,7 +15,7 @@ var:
   xbee:
     version: 1.16.4
 
-builders:
+builder:
   - autoconf
   - m4
 
