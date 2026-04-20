@@ -24,7 +24,7 @@ provision:
 
 build:
   - shell:
-      cmds:
+      cmd:
         - ./configure --prefix=/usr --docdir=/usr/share/doc/automake-{{ .xbee.version }}
         - make
 #        - make -j4 check
