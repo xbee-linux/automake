@@ -18,6 +18,7 @@ var:
 builder:
   - autoconf
   - m4
+  - perl
 
 provision:
   url: https://ftp.gnu.org/gnu/automake/automake-{{ .xbee.version }}.tar.gz
