@@ -11,13 +11,10 @@ description: |
     automake: A tool for automatically generating Makefile.in files from Makefile.am files [To create all the Makefile.in files for a package, run this program in the top-level directory. By scanning the configure.in file, it automatically finds each appropriate Makefile.am file and generates the corresponding Makefile.in file.]
     automake-1.16: A hard link to automake
 
-var:
-  xbee:
-    version: 1.16.4
-
 builder:
   - autoconf
   - m4
+  - perl
 
 provision:
   url: https://ftp.gnu.org/gnu/automake/automake-{{ .xbee.version }}.tar.gz
